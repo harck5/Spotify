@@ -10,6 +10,9 @@ public class Spotify : MonoBehaviour
     public int currentSong;
     private AudioSource audioSource;
     public TextMeshProUGUI songName;
+    public TextMeshProUGUI artist;
+    public TextMeshProUGUI resetSong;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -22,6 +25,7 @@ public class Spotify : MonoBehaviour
         audioSource.clip = songs[currentSong];
         audioSource.Play();
         songName.text = songs[currentSong].name;
+        artist.text = songs[currentSong].name;//De momento solo mete el mismo nombre de cancion creo que se huele con el array
         UpdateSong();
     }
     public void NextSong()
