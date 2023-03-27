@@ -12,6 +12,8 @@ public class Spotify : MonoBehaviour
     public TextMeshProUGUI songName;
     public TextMeshProUGUI artist;
     public TextMeshProUGUI resetSong;
+    //public Button playButton;
+    //public Button pauseButton;
 
     private void Start()
     {
@@ -57,4 +59,19 @@ public class Spotify : MonoBehaviour
     {
         songName.text = songs[currentSong].name;
     }
+    /*public void PlayButtonFuction()
+    {
+        playButton.interactable = false;
+        pauseButton.interactable = true;
+    }
+    public void PauseButtonFuction()
+    {
+        playButton.interactable = true;
+        pauseButton.interactable = false;
+    }
+    public void PlayPauseButtonFuntion(bool playButtonHasBeenPressed)
+    {
+        playButton.interactable = !playButtonHasBeenPressed;
+        pauseButton.interactable = playButtonHasBeenPressed;
+    }*/
 }
